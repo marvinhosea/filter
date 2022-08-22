@@ -1,7 +1,9 @@
 package packages
 
+import "golang.org/x/exp/constraints"
+
 type AllowedTypes interface {
-	~int | ~int8 | ~int16 | ~int32 | ~int64 | ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr | ~float32 | ~float64 | string
+	constraints.Ordered
 }
 
 func Filter[T AllowedTypes](slice1, slice2 []T) []T {
