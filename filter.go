@@ -1,4 +1,4 @@
-package packages
+package filter
 
 import "golang.org/x/exp/constraints"
 
